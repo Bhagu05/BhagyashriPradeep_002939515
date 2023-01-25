@@ -14,8 +14,10 @@ public class Student {
     String lName;
     String CollegeName;
     long NUID;
-    Address address;
-    ContactInfo info;
+    Address currentAddress;
+    Address permAddress;
+    ContactInfo officeContact;
+    ContactInfo personalContact;
     
     public Student()
     {
@@ -23,10 +25,10 @@ public class Student {
         this.lName = "";
         this.NUID = 0;
         this.CollegeName ="";
-        this.address = new Address();
-        this.info = new ContactInfo();
-        
-        
+        this.currentAddress = new Address();
+        this.permAddress=new Address();
+        this.officeContact = new ContactInfo();
+        this.personalContact=new ContactInfo();            
     }
 
     public String getfName() {
@@ -61,52 +63,37 @@ public class Student {
         this.NUID = NUID;
     }
 
-    public Address getAddress() {
-        return address;
+    public Address getCurrentAddress() {
+        return currentAddress;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setCurrentAddress(Address currentAddress) {
+        this.currentAddress = currentAddress;
     }
 
-    public ContactInfo getInfo() {
-        return info;
+    public Address getPermAddress() {
+        return permAddress;
     }
 
-    public void setInfo(ContactInfo info) {
-        this.info = info;
+    public void setPermAddress(Address permAddress) {
+        this.permAddress = permAddress;
     }
-    
-    public static void main(String args[])
-    {
-        Student obj = new Student();
-        obj.setNUID(2939);
-        obj.setfName("Bhagyashri");
-        obj.setlName("Chavan");
-        obj.setCollegeName("Northeastern - COE");
-        
-        Address addr = obj.getAddress();
-        addr.setCurrentAptNo(416);
-        addr.setCurrentCity("Boston");
-        addr.setCurrentStreetName("Alphonsus Street");
-        addr.setCurrentZipCode(02120);
-        addr.setPermAptNo(703);
-        addr.setPermCity("Kalyan");
-        addr.setPermStreetName("Mangeshi flora");
-        addr.setPermZipCode(421301);
-        
- 
-        ContactInfo cinfo = obj.getInfo();
-        cinfo.setOfficeEmail("chavan.b@northeastern.edu");
-        cinfo.setOfficePhone(0);
-        cinfo.setPersonalEmail("bhagyashrichavan1997@gmail.com");
-        cinfo.setPersonalPhone(0);
-        
-        System.out.println(obj.getfName() + " " + obj.getlName() + " " + obj.getCollegeName() + " " + obj.getNUID() + " " + obj.getAddress().currentStreetName + " " + obj.getInfo().officeEmail);
-        
-        
-        
-        
-        
+
+    public ContactInfo getOfficeContact() {
+        return officeContact;
     }
+
+    public void setOfficeContact(ContactInfo officeContact) {
+        this.officeContact = officeContact;
+    }
+
+    public ContactInfo getPersonalContact() {
+        return personalContact;
+    }
+
+    public void setPersonalContact(ContactInfo personalContact) {
+        this.personalContact = personalContact;
+    }
+
+
 }

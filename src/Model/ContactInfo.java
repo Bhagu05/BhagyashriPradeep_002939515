@@ -10,50 +10,31 @@ package Model;
  * @author bhagy
  */
 public class ContactInfo {
-   String officeEmail;
-   String personalEmail;
-   long officePhone;
-   long personalPhone;
+   String email;
+   long phoneNumber;
    
    public ContactInfo()
    {
-       this.officeEmail="";
-       this.personalEmail="";
-       this.officePhone = 0;
-       this.personalPhone =0;
-       
+       this.email="";
+       this.phoneNumber=0;
+      
    }
 
-    public String getOfficeEmail() {
-        return officeEmail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setOfficeEmail(String officeEmail) {
-        this.officeEmail = officeEmail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getPersonalEmail() {
-        return personalEmail;
+    public long getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPersonalEmail(String personalEmail) {
-        this.personalEmail = personalEmail;
+    public void setPhoneNumber(long phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
-
-    public long getOfficePhone() {
-        return officePhone;
-    }
-
-    public void setOfficePhone(long officePhone) {
-        this.officePhone = officePhone;
-    }
-
-    public long getPersonalPhone() {
-        return personalPhone;
-    }
-
-    public void setPersonalPhone(long personalPhone) {
-        this.personalPhone = personalPhone;
-    }
-   
 }
+
+    

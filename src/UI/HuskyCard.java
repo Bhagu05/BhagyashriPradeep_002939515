@@ -513,8 +513,10 @@ public class HuskyCard extends javax.swing.JFrame {
         this.student.setCollegeName(cName);
         this.student.setNUID(Long.parseLong(nuid));
         
-        Address address = this.student.getAddress();
-        ContactInfo cinfo = this.student.getInfo();
+        Address currentAddress = this.student.getCurrentAddress();
+        Address permAddress = this.student.getPermAddress();
+        ContactInfo officeContact = this.student.getOfficeContact();
+        ContactInfo personalContact = this.student.getPersonalContact();
    
         
         String oEmail = Email.getText();
@@ -532,20 +534,23 @@ public class HuskyCard extends javax.swing.JFrame {
         String pCity = PCity.getText();
         String pZip = PZipCode.getText();
         
-        address.setCurrentAptNo(Integer.parseInt(cAptNo));
-        address.setCurrentCity(cCity);
-        address.setCurrentStreetName(cStreetName);
-        address.setCurrentZipCode(Long.parseLong(cZip));
+        currentAddress.setAptNumber(Integer.parseInt(cAptNo));
+        currentAddress.setCity(cCity);
+        currentAddress.setStreetName(cStreetName);
+        currentAddress.setZipCode(Long.parseLong(cZip));
         
-        address.setPermAptNo(Integer.parseInt(pAptNo));
-        address.setPermCity(pCity);
-        address.setPermStreetName(pStreetName);
-        address.setCurrentZipCode(Long.parseLong(pZip));
+        permAddress.setAptNumber(Integer.parseInt(pAptNo));
+        permAddress.setCity(pCity);
+        permAddress.setStreetName(pStreetName);
+        permAddress.setZipCode(Long.parseLong(pZip));
         
-        cinfo.setOfficeEmail(oEmail);
-        cinfo.setOfficePhone(Long.parseLong(oPhone));
-        cinfo.setPersonalEmail(perEmail);
-        cinfo.setPersonalPhone(Long.parseLong(perPhone));
+        
+        officeContact.setEmail(oEmail);
+        officeContact.setPhoneNumber(Long.parseLong(oPhone));
+        
+        personalContact.setEmail(perEmail);
+        personalContact.setPhoneNumber(Long.parseLong(perPhone));
+        
         
         JOptionPane.showMessageDialog(null, "Saved Successfully");
         
@@ -561,20 +566,20 @@ private void display()
         LabelNuId.setText((String.valueOf(this.student.getNUID())));
         LabelCname.setText(this.student.getCollegeName());
         
-        LabelOPhone.setText((String.valueOf(this.student.getInfo().getOfficePhone())));
-        LabelOemail.setText(this.student.getInfo().getOfficeEmail());
-        LabelpPhone.setText(String.valueOf(this.student.getInfo().getPersonalPhone()));
-        LabelpEmail.setText(this.student.getInfo().getPersonalEmail());
+        LabelOPhone.setText((String.valueOf(this.student.getOfficeContact().getPhoneNumber())));
+        LabelOemail.setText(this.student.getOfficeContact().getEmail());
+        LabelpPhone.setText(String.valueOf(this.student.getPersonalContact().getPhoneNumber()));
+        LabelpEmail.setText(this.student.getPersonalContact().getEmail());
         
-        LabelCStreetName.setText(this.student.getAddress().getCurrentStreetName());
-        LabelAptNo.setText(String.valueOf(this.student.getAddress().getCurrentAptNo()));
-        LabelCCity.setText(this.student.getAddress().getCurrentCity());
-        LabelcZip.setText(String.valueOf(this.student.getAddress().getCurrentZipCode()));
+        LabelCStreetName.setText(this.student.getCurrentAddress().getStreetName());
+        LabelAptNo.setText(String.valueOf(this.student.getCurrentAddress().getAptNumber()));
+        LabelCCity.setText(this.student.getCurrentAddress().getCity());
+        LabelcZip.setText(String.valueOf(this.student.getCurrentAddress().getZipCode()));
         
-        LabelPStreetName.setText(this.student.getAddress().getPermStreetName());
-        LabelpAptNo.setText(String.valueOf(this.student.getAddress().getPermAptNo()));
-        LabelPCity.setText(this.student.getAddress().getPermCity());
-        LabelPZip.setText(String.valueOf(this.student.getAddress().getPermZipCode()));
+        LabelPStreetName.setText(this.student.getPermAddress().getStreetName());
+        LabelpAptNo.setText(String.valueOf(this.student.getPermAddress().getAptNumber()));
+        LabelPCity.setText(this.student.getPermAddress().getCity());
+        LabelPZip.setText(String.valueOf(this.student.getPermAddress().getZipCode()));
             
     }
     /**

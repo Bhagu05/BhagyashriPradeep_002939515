@@ -10,90 +10,52 @@ package Model;
  * @author bhagy
  */
 public class Address {
-    String currentStreetName;
-    String currentCity;
-    int currentAptNo;
-    long currentZipCode;
-    String permStreetName;
-    String permCity;
-    int permAptNo;
-    long permZipCode;
+    String streetName;
+    String city;
+    long zipCode;
+    int aptNumber;
     
     public Address(){
-        this.currentAptNo=0;
-        this.currentCity ="";
-        this.currentStreetName="";
-        this.currentZipCode=0;
-        this.permAptNo=0;
-        this.permCity="";
-        this.permStreetName="";
-        this.permZipCode=0;
+        this.aptNumber=0;
+        this.city="";
+        this.streetName="";
+        this.zipCode=0;
         
     }
 
-    public String getCurrentStreetName() {
-        return currentStreetName;
+    public String getStreetName() {
+        return streetName;
     }
 
-    public void setCurrentStreetName(String currentStreetName) {
-        this.currentStreetName = currentStreetName;
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
     }
 
-    public String getCurrentCity() {
-        return currentCity;
+    public String getCity() {
+        return city;
     }
 
-    public void setCurrentCity(String currentCity) {
-        this.currentCity = currentCity;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public int getCurrentAptNo() {
-        return currentAptNo;
+    public long getZipCode() {
+        return zipCode;
     }
 
-    public void setCurrentAptNo(int currentAptNo) {
-        this.currentAptNo = currentAptNo;
+    public void setZipCode(long zipCode) {
+        this.zipCode = zipCode;
     }
 
-    public long getCurrentZipCode() {
-        return currentZipCode;
+    public int getAptNumber() {
+        return aptNumber;
     }
 
-    public void setCurrentZipCode(long currentZipCode) {
-        this.currentZipCode = currentZipCode;
+    public void setAptNumber(int aptNumber) {
+        this.aptNumber = aptNumber;
     }
+    
 
-    public String getPermStreetName() {
-        return permStreetName;
-    }
-
-    public void setPermStreetName(String permStreetName) {
-        this.permStreetName = permStreetName;
-    }
-
-    public String getPermCity() {
-        return permCity;
-    }
-
-    public void setPermCity(String permCity) {
-        this.permCity = permCity;
-    }
-
-    public int getPermAptNo() {
-        return permAptNo;
-    }
-
-    public void setPermAptNo(int permAptNo) {
-        this.permAptNo = permAptNo;
-    }
-
-    public long getPermZipCode() {
-        return permZipCode;
-    }
-
-    public void setPermZipCode(long permZipCode) {
-        this.permZipCode = permZipCode;
-    }
     
     
 }
