@@ -11,16 +11,14 @@ import Model.Product;
 
 /**
  *
- *@author Bhagyashri Chavan
+ *@author bhagy
 
  */
 public class DisplayJPanel extends javax.swing.JPanel {
 
     private DeliveryPackage delPackage;
 
-    /**
-     * Creates new form ViewJPanel
-     */
+   
     public DisplayJPanel() {
         initComponents();
         
@@ -57,7 +55,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
         prodPriceDisplayLabel = new javax.swing.JLabel();
         custNameDisplayLabel = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 153, 102));
+        setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(packageIdDisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 130, 30));
         add(packageWtDisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 130, 30));
@@ -97,10 +95,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
         custIdDisplay.setText(String.valueOf(customer.getCustomerId()));
         custNameDisplay.setText(customer.getFullName());
         
-//        Product product = this.delPackage.getProduct();
-//        productId1.setText(String.valueOf(product.getProductId()));
-//        productName1.setText(product.getProductName());
-//        productPrice1.setText(String.valueOf(product.getPrice()));
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

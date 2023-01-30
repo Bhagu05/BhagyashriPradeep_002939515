@@ -7,7 +7,7 @@ package Model;
 
 /**
  *
- * @author Bhagyashri Chavan
+ * @author bhagy
 
  */
 public class Customer {

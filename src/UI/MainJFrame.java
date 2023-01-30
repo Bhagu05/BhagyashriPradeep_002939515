@@ -9,14 +9,12 @@ import Model.DeliveryPackage;
 
 /**
  *
- * @author Bhagyashri Chavan
+ * @author bhagy
 
  */
 public class MainJFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MainJFrame
-     */
+  
     
     private DeliveryPackage deliveryPackage;
     public MainJFrame() {
@@ -53,7 +51,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ControlJPanel.setBackground(new java.awt.Color(204, 255, 204));
+        ControlJPanel.setBackground(new java.awt.Color(255, 51, 102));
         ControlJPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnCreate.setText("CREATE");
@@ -62,7 +60,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 btnCreateActionPerformed(evt);
             }
         });
-        ControlJPanel.add(btnCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 110, 30));
+        ControlJPanel.add(btnCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 110, 30));
 
         btnUpdate.setText("UPDATE");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +68,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 btnUpdateActionPerformed(evt);
             }
         });
-        ControlJPanel.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 110, 30));
+        ControlJPanel.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 110, 30));
 
         btnDisplay.setText("DISPLAY");
         btnDisplay.addActionListener(new java.awt.event.ActionListener() {
@@ -78,7 +76,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 btnDisplayActionPerformed(evt);
             }
         });
-        ControlJPanel.add(btnDisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 110, 30));
+        ControlJPanel.add(btnDisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 110, 30));
 
         jSplitPane1.setLeftComponent(ControlJPanel);
 
@@ -88,25 +86,23 @@ public class MainJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
-        // TODO add your handling code here:
+       
         jSplitPane1.setRightComponent(new CreateJPanel(this.deliveryPackage));
     }//GEN-LAST:event_btnCreateActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-        // TODO add your handling code here:
+        
         System.out.println("UI.MainJFrame.btnUpdateActionPerformed()");
         jSplitPane1.setRightComponent(new UpdateJPanel(this.deliveryPackage));
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void btnDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisplayActionPerformed
-        // TODO add your handling code here:
+       
         
         jSplitPane1.setRightComponent(new DisplayJPanel(this.deliveryPackage));
     }//GEN-LAST:event_btnDisplayActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -131,7 +127,7 @@ public class MainJFrame extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+      
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainJFrame().setVisible(true);

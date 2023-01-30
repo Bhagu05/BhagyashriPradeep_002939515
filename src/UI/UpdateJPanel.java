@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Bhagyashri Chavan
+ * @author bhagy
  */
 public class UpdateJPanel extends javax.swing.JPanel {
 
@@ -66,7 +66,7 @@ public class UpdateJPanel extends javax.swing.JPanel {
         prodCombo = new javax.swing.JComboBox();
         btnShow = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(0, 204, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(packageIdUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 130, 30));
         add(packageWtUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 130, 30));

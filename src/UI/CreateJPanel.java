@@ -12,14 +12,12 @@ import javax.swing.JOptionPane;
 
 /**
  *
-  * @author Bhagyashri Chavan
+  * @author bhagy
 
  */
 public class CreateJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form CreateJPanel
-     */
+ 
     
     private DeliveryPackage delPackage;
     
@@ -33,7 +31,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     CreateJPanel(DeliveryPackage deliveryPackage) {
         initComponents();
         
-        // logic to take information from the user and store it in the delivery package
+        
         this.delPackage = deliveryPackage;
     }
 
@@ -63,7 +61,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         btnSaveProd = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(153, 153, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(packageIdCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 130, 30));
         add(packageWtCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 130, 30));
@@ -118,9 +116,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        // TODO add your handling code here:
-        
-        // get the data
+       
         String id = packageIdCreate.getText();
         String weight = packageWtCreate.getText();
         
@@ -129,7 +125,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         
         
         
-        // store the data
+       
         this.delPackage.setPackageId(Integer.valueOf(id));
         this.delPackage.setPackageWeight(Double.valueOf(weight));
         
@@ -148,7 +144,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void btnSaveProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveProdActionPerformed
-        // TODO add your handling code here:
+       
         String productId = productIdCreate.getText();
         String productName = productNameCreate.getText();
         String productPrice = productPriceCreate.getText();
@@ -165,7 +161,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         String name = custNameCreate.getText();
         
         if(name.isEmpty()) {
-           // JOptionPane.showMessageDialog(null, "Please fill name");
+           
             this.validate = true;
         } else {
             this.validate = false;
